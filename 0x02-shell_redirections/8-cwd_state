@@ -1,7 +1,2 @@
 #!/bin/bash
-# Get the current working directory
-CWD=$(pwd)
-# Run ls -la in the current working directory
-LS_OUTPUT=$(ls -la)
-# Write the output of ls -la to the file ls_cwd_content
-echo "$LS_OUTPUT" > "ls_cwd_content"
+ls -la > ls_cwd_content
