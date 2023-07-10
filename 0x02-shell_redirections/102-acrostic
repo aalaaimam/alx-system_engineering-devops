@@ -1,2 +1,13 @@
 #!/bin/bash
-cut -c 1 | paste -s -d"
+# Get the input file name
+INPUT_FILE_NAME=$1
+# Read the input file
+INPUT_FILE=$(cat "$INPUT_FILE_NAME")
+# Split the input file into lines
+LINES=($INPUT_FILE)
+# Get the first letter of each line
+FIRST_LETTERS=($(echo "${LINES[@]}" | cut -c 1))
+# Join the first letters into a string
+DECODED_MESSAGE=$(echo "${FIRST_LETTERS[@]}" | tr " " "\n")
+# Print the decoded message
+echo "$DECODED_MESSAGE"
