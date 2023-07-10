@@ -1,7 +1,2 @@
 #!/bin/bash
-# Read the file iacta
-read -r line1 < iacta
-read -r line2 < iacta
-read -r line3 < iacta
-# Display the third line
-echo "$line3"
+head -n 3 iacta | tail -n 1
